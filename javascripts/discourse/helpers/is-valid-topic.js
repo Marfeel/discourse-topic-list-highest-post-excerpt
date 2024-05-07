@@ -10,5 +10,5 @@ registerRawHelper('isValidTopic', function(category, isPrivateMessage) {
 		.map((id) => parseInt(id, 10))
 		.filter((id) => id);
 
-	return array.length === 0 || array.includes(category);
+	return array.includes(category);
 });
