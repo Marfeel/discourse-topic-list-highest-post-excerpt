@@ -1,5 +1,5 @@
 {{#if context.topic.highest_post_excerpt}}
-	{{#if (isValidCategory context.topic.category_id)}}
+	{{#if (isValidTopic context.topic.category_id context.topic.isPrivateMessage)}}
 		<a href="{{context.topic.url}}" class="topic-excerpt highest-post-excerpt">
 			{{#if (theme-setting "show_reply_icon")}}
 				{{d-icon "reply"}}

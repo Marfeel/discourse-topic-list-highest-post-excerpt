@@ -15,4 +15,8 @@ categories:
   default: ""
   list_type: category
   description:
-    en: Apply plugin to the following categories. Blank applies to all of them.
+    en: Apply plugin to the following categories.
+private_messages:
+  default: false
+  description:
+    en: Apply plugin to private messages
