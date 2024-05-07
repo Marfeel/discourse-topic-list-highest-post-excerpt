@@ -1,3 +1,5 @@
+{{context.topic.private_message}}
+wolol
 {{#if context.topic.highest_post_excerpt}}
 	{{#if (isValidCategory context.topic.category_id)}}
 		<a href="{{context.topic.url}}" class="topic-excerpt highest-post-excerpt">
