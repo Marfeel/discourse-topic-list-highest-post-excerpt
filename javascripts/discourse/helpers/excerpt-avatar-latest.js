@@ -15,7 +15,7 @@ export function excerptAvatarLatest(featuredUsers) {
           avatarTemplatePath: "user.avatar_template",
           usernamePath: "user.username",
           namePath: "user.name",
-          imageSize: "tiny",
+          imageSize: 18,
         })
       );
     }
