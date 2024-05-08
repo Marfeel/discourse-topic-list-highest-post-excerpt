@@ -1,9 +1,21 @@
 show_avatars:
-  default: false
+  default: "none"
+  type: enum
+  choices:
+    - all
+    - none
+    - topics
+    - messages
   description:
     en: Display excerpt avatar.
 show_reply_icon:
-  default: false
+  default: "none"
+  type: enum
+  choices:
+    - all
+    - none
+    - topics
+    - messages
   description:
     en: Display a reply icon before latest post excerpt.
 single_line:
