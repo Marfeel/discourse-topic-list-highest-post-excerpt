@@ -67,7 +67,7 @@
           {{html-safe this.post.topic.highest_post_excerpt}}
         {{else}}
           <HighlightSearch @highlight={{this.highlightQuery}}>
-            {{html-safethis.post.topic.highest_post_excerpt}}
+            {{html-safe this.post.topic.highest_post_excerpt}}
           </HighlightSearch>
         {{/if}}
     {{else}}
