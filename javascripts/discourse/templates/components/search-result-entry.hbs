@@ -63,12 +63,11 @@
       {{/if}}
     </span>
     {{#if (and this.post.topic.highest_post_excerpt this.post.topic.isPrivateMessage)}}
-	heeeeere
         {{#if this.siteSettings.use_pg_headlines_for_excerpt}}
           {{html-safe this.post.topic.highest_post_excerpt}}
         {{else}}
           <HighlightSearch @highlight={{this.highlightQuery}}>
-            {{html-safethis.post.topic.highest_post_excerpt}}
+            {{html-safe this.post.topic.highest_post_excerpt}}
           </HighlightSearch>
         {{/if}}
     {{else}}
