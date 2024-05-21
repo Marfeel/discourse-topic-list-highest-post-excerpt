@@ -62,7 +62,7 @@
         <span class="separator">-</span>
       {{/if}}
     </span>
-	a {{this.post.topic.isPrivateMessage}} b {{this.post.topic.highest_post_excerpt}}
+	a {{this.post.topic.isPrivateMessage}} b {{this.post.topic.highest_post_excerpt}} c {{(this.post.topic.highest_post_excerpt and this.post.topic.isPrivateMessage)}}
     {{#if (this.post.topic.highest_post_excerpt and this.post.topic.isPrivateMessage)}}
 		here
         {{#if this.siteSettings.use_pg_headlines_for_excerpt}}
