@@ -62,10 +62,14 @@
         <span class="separator">-</span>
       {{/if}}
     </span>
+	a {{this.post.topic.isPrivateMessage}} b {{this.post.topic.highest_post_excerpt}}
     {{#if (this.post.topic.highest_post_excerpt and this.post.topic.isPrivateMessage)}}
+		here
         {{#if this.siteSettings.use_pg_headlines_for_excerpt}}
+			here2
           {{html-safe this.post.topic.highest_post_excerpt}}
         {{else}}
+			here3
           <HighlightSearch @highlight={{this.highlightQuery}}>
             {{html-safe this.post.topic.highest_post_excerpt}}
           </HighlightSearch>
