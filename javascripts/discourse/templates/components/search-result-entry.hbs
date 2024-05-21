@@ -62,16 +62,13 @@
         <span class="separator">-</span>
       {{/if}}
     </span>
-	a {{this.post.topic.isPrivateMessage}} b {{this.post.topic.highest_post_excerpt}} c {{(this.post.topic.highest_post_excerpt and this.post.topic.isPrivateMessage)}}
-    {{#if (this.post.topic.highest_post_excerpt and this.post.topic.isPrivateMessage)}}
-		here
+    {{#if (and this.post.topic.highest_post_excerpt this.post.topic.isPrivateMessage)}}
+	heeeeere
         {{#if this.siteSettings.use_pg_headlines_for_excerpt}}
-			here2
           {{html-safe this.post.topic.highest_post_excerpt}}
         {{else}}
-			here3
           <HighlightSearch @highlight={{this.highlightQuery}}>
-            {{html-safe this.post.topic.highest_post_excerpt}}
+            {{html-safethis.post.topic.highest_post_excerpt}}
           </HighlightSearch>
         {{/if}}
     {{else}}
