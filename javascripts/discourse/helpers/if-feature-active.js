@@ -1,6 +1,6 @@
-import { registerRawHelper } from "discourse/lib/helpers";
+import { helper } from "@ember/component/helper";
 
-registerRawHelper("isFeatureActive", (feature, isPrivateMessage) => {
+export default helper(function isFeatureActive([feature, isPrivateMessage]) {
   if (!["show_avatars", "show_reply_icon"].includes(feature)) {
     return false;
   }

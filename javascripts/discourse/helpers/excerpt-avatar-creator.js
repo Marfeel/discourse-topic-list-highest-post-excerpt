@@ -1,12 +1,10 @@
+import { helper } from "@ember/component/helper";
 import { htmlSafe } from "@ember/template";
 import { renderAvatar } from "discourse/helpers/user-avatar";
-import { registerRawHelper } from "discourse/lib/helpers";
 
-registerRawHelper("excerpt-avatar-creator", excerptAvatarCreator);
-
-export function excerptAvatarCreator(featuredUsers) {
+export default helper(function excerptAvatarCreator([featuredUsers]) {
   if (!featuredUsers || !featuredUsers.length) {
-    return "";
+    return htmlSafe("");
   }
   if (featuredUsers?.length) {
     return htmlSafe(
@@ -18,4 +16,5 @@ export function excerptAvatarCreator(featuredUsers) {
       })
     );
   }
-}
+  return htmlSafe("");
+});
