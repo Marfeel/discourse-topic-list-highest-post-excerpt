@@ -1,10 +1,12 @@
-import { helper } from "@ember/component/helper";
 import { htmlSafe } from "@ember/template";
 import { renderAvatar } from "discourse/helpers/user-avatar";
+import { registerRawHelper } from "discourse/lib/helpers";
 
-export default helper(function excerptAvatarLatest([featuredUsers]) {
+registerRawHelper("excerpt-avatar-latest", excerptAvatarLatest);
+
+export function excerptAvatarLatest(featuredUsers) {
   if (!featuredUsers || !featuredUsers.length) {
-    return htmlSafe("");
+    return "";
   }
   for (let i = 0; i < featuredUsers.length; i++) {
     if (featuredUsers[i].extras?.includes("latest")) {
@@ -18,5 +20,4 @@ export default helper(function excerptAvatarLatest([featuredUsers]) {
       );
     }
   }
-  return htmlSafe("");
-});
+}

@@ -1,6 +1,6 @@
-import { helper } from "@ember/component/helper";
+import { registerRawHelper } from "discourse/lib/helpers";
 
-export default helper(function isValidTopic([category, isPrivateMessage]) {
+registerRawHelper("isValidTopic", (category, isPrivateMessage) => {
   if (isPrivateMessage) {
     return settings.private_messages;
   }
