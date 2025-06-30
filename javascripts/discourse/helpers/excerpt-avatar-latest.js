@@ -1,6 +1,6 @@
 import { htmlSafe } from "@ember/template";
 import { renderAvatar } from "discourse/helpers/user-avatar";
-import { registerRawHelper } from "discourse-common/lib/helpers";
+import { registerRawHelper } from "discourse/lib/helpers";
 
 registerRawHelper("excerpt-avatar-latest", excerptAvatarLatest);
 
@@ -9,7 +9,7 @@ export function excerptAvatarLatest(featuredUsers) {
     return "";
   }
   for (let i = 0; i < featuredUsers.length; i++) {
-    if (featuredUsers[i].extras && featuredUsers[i].extras.includes("latest")) {
+    if (featuredUsers[i].extras?.includes("latest")) {
       return htmlSafe(
         renderAvatar(featuredUsers[i], {
           avatarTemplatePath: "user.avatar_template",

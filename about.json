@@ -1,11 +1,11 @@
 {
   "name": "Latest Post Excerpts",
   "component": true,
-  "authors": "dsims",
-  "about_url": "https://github.com/dsims/discourse-topic-list-highest-post-excerpt",
-  "theme_version": "0.0.1",
-  "minimum_discourse_version": null,
-  "maximum_discourse_version": null,
+  "authors": "Marfeel",
+  "about_url": "https://github.com/Marfeel/discourse-topic-list-highest-post-excerpt",
+  "theme_version": "0.0.5",
   "assets": {},
-  "modifiers": {}
+  "modifiers": {
+    "serialize_topic_excerpts": true
+  }
 }
