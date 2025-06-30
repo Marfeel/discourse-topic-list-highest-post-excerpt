@@ -1,14 +1,15 @@
-import { registerRawHelper } from 'discourse-common/lib/helpers';
+import { registerRawHelper } from "discourse/lib/helpers";
 
-registerRawHelper('isValidTopic', function(category, isPrivateMessage) {
-	if (isPrivateMessage) {
-		return settings.private_messages;
-	}
+registerRawHelper("isValidTopic", (category, isPrivateMessage) => {
+  if (isPrivateMessage) {
+    return settings.private_messages;
+  }
 
-	const array = settings.categories.split('|')
-		.filter((id) => id !== '')
-		.map((id) => parseInt(id, 10))
-		.filter((id) => id);
+  const array = settings.categories
+    .split("|")
+    .filter((id) => id !== "")
+    .map((id) => Number.parseInt(id, 10))
+    .filter((id) => id);
 
-	return array.includes(category);
+  return array.includes(category);
 });

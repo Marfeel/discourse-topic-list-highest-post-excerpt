@@ -30,5 +30,6 @@ categories:
     en: Apply plugin to the following categories.
 private_messages:
   default: false
+  type: bool
   description:
     en: Apply plugin to private messages

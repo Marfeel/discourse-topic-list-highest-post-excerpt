@@ -1,6 +1,6 @@
 import { htmlSafe } from "@ember/template";
 import { renderAvatar } from "discourse/helpers/user-avatar";
-import { registerRawHelper } from "discourse-common/lib/helpers";
+import { registerRawHelper } from "discourse/lib/helpers";
 
 registerRawHelper("excerpt-avatar-creator", excerptAvatarCreator);
 
@@ -8,7 +8,7 @@ export function excerptAvatarCreator(featuredUsers) {
   if (!featuredUsers || !featuredUsers.length) {
     return "";
   }
-  if (featuredUsers && featuredUsers.length) {
+  if (featuredUsers?.length) {
     return htmlSafe(
       renderAvatar(featuredUsers[0], {
         avatarTemplatePath: "user.avatar_template",
