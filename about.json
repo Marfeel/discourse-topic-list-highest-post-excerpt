@@ -3,7 +3,7 @@
   "component": true,
   "authors": "Marfeel",
   "about_url": "https://github.com/Marfeel/discourse-topic-list-highest-post-excerpt",
-  "theme_version": "0.0.5",
+  "theme_version": "0.0.6",
   "assets": {},
   "modifiers": {
     "serialize_topic_excerpts": true
