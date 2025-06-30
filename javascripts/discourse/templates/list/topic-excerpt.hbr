@@ -1,5 +1,5 @@
 {{#if topic.hasExcerpt}}
-  <a href="{{topic.url}}" class="topic-excerpt hbr">
+  <a href="{{topic.url}}" class="topic-excerpt">
     {{#if (theme-setting "show_avatars")}}
       {{excerpt-avatar-creator topic.featuredUsers}}
     {{/if}}
